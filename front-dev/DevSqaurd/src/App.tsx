@@ -6,6 +6,7 @@ function App() {
       <h1>안녕!</h1>
       <h1>community</h1>
       <h1>project</h1>
+      <h1>mypage</h1>
     </>
   );
 }
