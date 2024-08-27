@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <h1>안녕!</h1>
+      <h1>community</h1>
     </>
   )
 }
