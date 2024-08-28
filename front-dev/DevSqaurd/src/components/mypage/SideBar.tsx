@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-</head>
-<body>
-<div>
-    <nav>
-      <ul>
-        <li><a href="https://www.naver.com">네이버</a></li>
-        <li><a href="https://www.kakao.com">카카오</a></li>
-        <li><a href="https://www.line.com">라인</a></li>
-        <li><a href="https://www.coupang.com">쿠팡</a></li>
-      </ul>
-    </nav>
-  </div>
-</body>
-</html>
+import style from "./styles/SideBar.module.css";
+import { Link } from "react-router-dom";
 
+const menuItem = [
+  { Text: "MY PAGE", Link: "/mypage" },
+  { Text: "프로필수정", Link: "/edit" },
+  { Text: "나의활동", Link: "/activities" },
+];
+
+const SideBar = () => {
+  return (
+    <div className={style.sidebar}>
+      <nav>
+        <ul>
+          {menuItem.map((item, index) => (
+            <li key={index} className={style.menuItem}>
+              <Link to={item.Link} className={style.link}>
+                {item.Text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+};
+export default SideBar;
