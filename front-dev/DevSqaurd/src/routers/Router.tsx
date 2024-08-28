@@ -10,9 +10,7 @@ export default function Router() {
       <Route element={<Layout />}>
         <Route path="/test" element={<TestPage />} />
         <Route path="/mypage" element={<SideBar />} />
-      <Route element={<Layout/>}>
-        <Route path="/test" element={<TestPage/>} />  
-
+ 
         <Route path="/project" element={<ProjectMain/>}/>
       </Route>
     </Routes>
