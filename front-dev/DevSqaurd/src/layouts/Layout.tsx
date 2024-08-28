@@ -1,14 +1,14 @@
-import React from 'react';
-import Footer from './Footer';
+import { Outlet } from "react-router-dom";
+import Footer from "./Footer";
+import Header from "./header";
 
-const Layout = (props: {children: React.ReactNode}) => {
+
+export default function Layout() {
   return (
     <>
-      <Header />
-      <main>{props.children}</main>
-      <Footer />
+      <Header/>
+      <Outlet/>
+      <Footer/>
     </>
-  );
+  )
 };
-
-export default Layout;
