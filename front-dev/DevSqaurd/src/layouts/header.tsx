@@ -1,11 +1,11 @@
 import React from 'react';
 
-function header() {
+const Header = () => {
   return (
-    <div>
-      z
-    </div>
+    <>
+     <header>헤더입니다잉</header>
+    </>
   );
-}
+};
 
-export default header;
+export default Header;
