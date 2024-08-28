@@ -1,13 +1,12 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import TestPage from "./pages/TestPage";
 
 function App() {
   return (
-    <>
-      <h1>김태환 바보!</h1>
-      <h1>community</h1>
-      <h1>project</h1>
-      <h1>mypage</h1>
-    </>
+    <Routes>
+      <Route path="/test" element={<TestPage/>} />
+    </Routes>
   );
 }
 
