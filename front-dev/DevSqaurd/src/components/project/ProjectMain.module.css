@@ -1,0 +1,41 @@
+.test {
+    font-size: 50px;
+}
+.tag {
+
+}
+.list>li {
+    display: inline;
+}
+.li {
+    padding : 40px;
+    
+    margin-bottom: 30px;
+}
+.div1{
+    height: 70%;
+    width : 80%;
+}
+
+.table {
+    width: 600px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.table th {
+    border: dotted 1px black ;
+    border-radius: 2rem;
+    width: 80px;
+   
+}
+*{
+    margin: 20px;
+}
+.rigthbtn{
+    display:flex;
+    flex-direction: column;
+    margin-left: auto;
+    
+}
