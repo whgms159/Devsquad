@@ -30,9 +30,6 @@
     width: 80px;
    
 }
-*{
-    margin: 20px;
-}
 .rigthbtn{
     display:flex;
     flex-direction: column;

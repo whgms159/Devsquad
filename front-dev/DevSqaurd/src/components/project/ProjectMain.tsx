@@ -1,6 +1,6 @@
 import style from './ProjectMain.module.css';
 
-export default function ProjectMain() {
+const ProjectMain = () => {
   return (
     <div className={`${style.div1}`}>
         <div className={`${style.test}`}>전체 프로젝트</div>
@@ -32,3 +32,5 @@ export default function ProjectMain() {
     </div>
   )
 }
+
+export default ProjectMain;

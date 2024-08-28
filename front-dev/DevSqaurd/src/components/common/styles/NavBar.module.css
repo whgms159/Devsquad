@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menuItem {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.loginButton {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #0056b3;
+}

@@ -1,28 +1,31 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import styles from "./styles/NavBar.module.css";
 
-export default function NavBar() {
-  const navigete = useNavigate();
+const NavBar = () => {
+  const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigete("/login");
+    navigate("/login");
   };
 
-  return(
-    <>
+  return (
+    <nav className={styles.navbar}>
       {/* 로고 */}
-      <NavLink to="/">
-        DevSquard
+      <NavLink to="/" className={styles.logo}>
+        DevSquad
       </NavLink>
 
-      <div>
-        <NavLink to="/project">Project</NavLink>
-        <NavLink to="/project">Lounge</NavLink>
-        <NavLink to="/project">MyPage</NavLink>
+      <div className={styles.menu}>
+        <NavLink to="/project" className={styles.menuItem}>Project</NavLink>
+        <NavLink to="/community" className={styles.menuItem}>Lounge</NavLink>
+        <NavLink to="/mypage" className={styles.menuItem}>MyPage</NavLink>
 
-        <div onClick={handleLoginClick}>
+        <div onClick={handleLoginClick} className={styles.loginButton}>
           Login
         </div>
       </div>
-    </>
+    </nav>
   );
 };
+
+export default NavBar;
