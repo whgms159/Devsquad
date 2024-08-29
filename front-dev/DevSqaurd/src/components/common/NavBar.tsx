@@ -13,7 +13,7 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       {/* 로고 */}
       <NavLink to="/" className={styles.logo}>
-      <img src={logo} alt="DevSquad Logo" className={styles.logoImage} />
+        <img src={logo} alt="DevSquad Logo" className={styles.logoImage} />
       </NavLink>
 
       <div className={styles.menu}>

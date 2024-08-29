@@ -1,14 +1,17 @@
 .navbar {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between; /* 좌우의 요소 사이에 공간을 균등하게 배치 */
+  align-items: center;            /* 수직 중앙 정렬 */
   padding: 0.5rem 1rem;
   background-color: #fff;
   color: black;
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 80%;   /* 너비를 90%로 설정 */
+  margin: 0 auto; /* 부모 요소에 맞춰 중앙 정렬 */
 }
+
 
 .logo {
   font-size: 1.5rem;
