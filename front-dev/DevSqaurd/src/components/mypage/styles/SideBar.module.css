@@ -1,32 +1,42 @@
 .sidebar {
-  width: 250px;
-  padding: 0.5rem;
+  width: 150px;
+  padding: 1rem;
   position: fixed;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  background-color: aliceblue;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  z-index: 100;
 }
+
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
+
 .menuItem {
   margin-bottom: 0;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid black;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  font-weight: 500;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 .menuItem:last-child {
   border-bottom: none;
 }
+
 .link {
   text-decoration: none;
-  color: black;
+  color: #333;
   display: block;
+  font-weight: 500;
+  padding: 0.5rem;
 }
+
 .link:hover {
-  color: black;
-  background-color: transparent;
+  background-color: #f0f0f0;
+  color: #333;
 }
