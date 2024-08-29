@@ -1,0 +1,47 @@
+/* MainPage.module.css */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselSlide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carouselSlide img {
+  width: 100%;
+  display: block;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carouselButton.prev {
+  left: 10px;
+}
+
+.carouselButton.next {
+  right: 10px;
+}
