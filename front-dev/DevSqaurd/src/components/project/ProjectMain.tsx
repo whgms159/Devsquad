@@ -1,36 +1,120 @@
-import style from './ProjectMain.module.css';
+import style from "./ProjectMain.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import test from "../../assets/logo.png";
 
+// interface CardProps {
+//   imageSrc: string;
+//   altText: string;
+//   text: string;
+// }
 const ProjectMain = () => {
   return (
-    <div className={`${style.div1}`}>
-        <div className={`${style.test}`}>전체 프로젝트</div>
-        <div>
-            <table className={`${style.table}`}>
-                <th className={`${style.tag}`}><a href="#">태그</a></th>
-                <th className={`${style.tag}`}><a href="#">태그</a></th>
-                <th className={`${style.tag}`}><a href="#">태그</a></th>
-                <th className={`${style.tag}`}><a href="#">태그</a></th>
-            </table>
+    <div className={`${style.container}`}>
+      <div className={`${style.title}`}>전체 프로젝트</div>
+
+      <div className={style.topbtn}>
+        <span>
+          <input type="checkbox" />
+          출시 서비스만 보기
+        </span>
+
+        <button>프로젝트 생성</button>
+      </div>
+
+      {/* <ul>
+                <li>
+                {ProjectMain.map(project => (
+                <Project key={project.projectId} project={project} />
+                ))}
+                </li>
+            </ul> */}
+
+      <div>
+        <div className={`${style.common}`}>
+          <table className={`${style.tags}`}>
+            <th>
+              <a href="#">태그</a>
+            </th>
+            <th>
+              <a href="#">태그</a>
+            </th>
+            <th>
+              <a href="#">태그</a>
+            </th>
+            <th>
+              <a href="#">태그</a>
+            </th>
+          </table>
         </div>
-        <div>
-            <button>출시 서비스만 보기</button><button className={`${style.rigthbtn}`}>프로젝트 생성</button>
-        </div>
-        <div>
-            <ul className={`${style.list}`}>
-                <li className={`${style.li}`}>프로젝트</li>    
-                <li className={`${style.li}`}>프로젝트</li>   
-                <li className={`${style.li}`}>프로젝트</li>   
-                <li className={`${style.li}`}>프로젝트</li>   
-                <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
-                <li className={`${style.li}`}>프로젝트</li>   
-                <li className={`${style.li}`}>프로젝트</li>   
-                <li className={`${style.li}`}>프로젝트</li>   
-                <li className={`${style.li}`}>프로젝트</li>   
-            </ul>   
-        </div>  
-       
+        <ul className={`${style.list1}`}>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="아몰랑" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="아몰랑" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="dd" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="아몰랑" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="아몰랑" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="아몰랑" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="아몰랑" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+          <li className={`${style.li1}`}>
+            <div className="card" style={{ width: "18rem" }}>
+              <img src={test} className="card-img-top" alt="아몰랑" />
+              <div className="card-body">
+                <p className="card-text">dd</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProjectMain;

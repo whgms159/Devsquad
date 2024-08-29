@@ -2,7 +2,7 @@ import style from "./styles/SideBar.module.css";
 import { Link } from "react-router-dom";
 
 const menuItem = [
-  { Text: "MY PAGE", Link: "/mypage" },
+  { Text: "MY PAGE", Link: "/my-page" },
   { Text: "프로필수정", Link: "/edit" },
   { Text: "나의활동", Link: "/activities" },
 ];
