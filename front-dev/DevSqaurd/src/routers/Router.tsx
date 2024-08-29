@@ -4,6 +4,8 @@ import SideBar from "../components/mypage/SideBar";
 import ProjectMain from "../components/project/ProjectMain";
 import MainPage from "../pages/MainPage";
 import CommunityPage from "../pages/CommunityPage";
+import ProjectPage from "../pages/ProjectPage";
+import MyPage from "../pages/MyPage";
 
 export default function Router() {
   return (
@@ -14,13 +16,13 @@ export default function Router() {
         <Route path="/" element={<MainPage />} />
 
         {/* 프로젝트 페이지 */}
-        <Route path="/project" element={<ProjectMain/>}/>
+        <Route path="/project/*" element={<ProjectPage />}/>
         
         {/* 커뮤니티 페이지 */}
-        <Route path="/community" element={<CommunityPage/>}/>
+        <Route path="/community/*" element={<CommunityPage/>}/>
 
         {/* 마이 페이지 */}
-        <Route path="/mypage" element={<SideBar />} />
+        <Route path="/my-page/*" element={<MyPage />} />
 
       </Route>
     </Routes>

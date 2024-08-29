@@ -18,7 +18,7 @@ const NavBar = () => {
       <div className={styles.menu}>
         <NavLink to="/project" className={styles.menuItem}>Project</NavLink>
         <NavLink to="/community" className={styles.menuItem}>Lounge</NavLink>
-        <NavLink to="/mypage" className={styles.menuItem}>MyPage</NavLink>
+        <NavLink to="/my-page" className={styles.menuItem}>MyPage</NavLink>
 
         <div onClick={handleLoginClick} className={styles.loginButton}>
           Login

@@ -1,8 +1,11 @@
+import { Route, Routes } from "react-router-dom";
+import SideBar from "../components/mypage/SideBar";
+
 const MyPage = () => {
     return (
-      <>
-        <div>MyPage</div>
-      </>
+      <Routes>
+        <Route path="/" element={<SideBar />} />
+    </Routes>
     );
 };
 
