@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./styles/NavBar.module.css";
+import logo from "../../assets/logo.png";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       {/* 로고 */}
       <NavLink to="/" className={styles.logo}>
-        DevSquad
+      <img src={logo} alt="DevSquad Logo" className={styles.logoImage} />
       </NavLink>
 
       <div className={styles.menu}>

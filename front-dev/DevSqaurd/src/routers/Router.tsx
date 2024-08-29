@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "../layouts/Layout";
-import SideBar from "../components/mypage/SideBar";
-import ProjectMain from "../components/project/ProjectMain";
 import MainPage from "../pages/MainPage";
 import CommunityPage from "../pages/CommunityPage";
 import ProjectPage from "../pages/ProjectPage";

@@ -17,6 +17,11 @@
   text-decoration: none;
 }
 
+.logoImage {
+  width: 180px;
+  height: auto;
+}
+
 .menu {
   display: flex;
   gap: 1rem;
