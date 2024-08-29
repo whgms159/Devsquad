@@ -17,11 +17,7 @@
     "@mui/styled-engine-sc": "^6.0.0",
     "@storybook/cli": "^8.2.9",
     "@types/react-router-dom": "^5.3.3",
-<<<<<<< HEAD
-    "global": "^4.4.0",
-=======
     "bootstrap": "5.3.3",
->>>>>>> 4b2fb697307adb4e3232fa9f2784a2eff347fb22
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",

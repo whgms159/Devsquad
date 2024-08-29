@@ -2,11 +2,11 @@ import style from "./ProjectMain.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import test from "../../assets/logo.png";
 
-interface CardProps {
-  imageSrc: string;
-  altText: string;
-  text: string;
-}
+// interface CardProps {
+//   imageSrc: string;
+//   altText: string;
+//   text: string;
+// }
 const ProjectMain = () => {
   return (
     <div className={`${style.container}`}>
@@ -65,7 +65,7 @@ const ProjectMain = () => {
           </li>
           <li className={`${style.li1}`}>
             <div className="card" style={{ width: "18rem" }}>
-              <img src={test} className="card-img-top" alt={altText} />
+              <img src={test} className="card-img-top" alt="dd" />
               <div className="card-body">
                 <p className="card-text">dd</p>
               </div>
