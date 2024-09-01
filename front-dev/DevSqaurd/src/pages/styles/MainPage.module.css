@@ -1,4 +1,3 @@
-/* MainPage.module.css */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -6,42 +5,31 @@
   padding: 20px;
 }
 
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carouselTrack {
+.cardBox {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carouselSlide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.carouselSlide img {
+  justify-content: space-around;
   width: 100%;
-  display: block;
+  margin: 30px 0 30px 0;
 }
 
-.carouselButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+.projectRecruitContainer {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.carouselButton.prev {
-  left: 10px;
+.subHeading {
+  color: #ccc;
+  font-size: 24px;
 }
 
-.carouselButton.next {
-  right: 10px;
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.recruitBox {
+
 }

@@ -6,8 +6,6 @@
 }
 
 .content {
-  display: flex;
-  justify-content: center; /* 수평 중앙 정렬 */
   height: 100vh; 
 }
 
