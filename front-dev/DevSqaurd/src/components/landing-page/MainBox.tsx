@@ -4,6 +4,9 @@ import style from './styles/MainBox.module.css';
 export default function MainBox() {
   return (
     <div className={style.container}>
+      <div className={style.loginBox}>
+        로그인 박스
+      </div>
     </div>
   );
 };

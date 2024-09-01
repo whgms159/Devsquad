@@ -8,7 +8,6 @@ import RecruitBox from '../components/landing-page/RecruitBox';
 const MainPage = () => {
     return (
         <div className={style.container}>
-            <div className={style.header}>MainPage</div>
             <div className={style.mainContent}>
                 <MainBox />
                 <div className={style.cardBox}>
