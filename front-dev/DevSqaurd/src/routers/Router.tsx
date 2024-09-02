@@ -17,7 +17,7 @@ export default function Router() {
         <Route path="/project/*" element={<ProjectPage />}/>
         
         {/* 커뮤니티 페이지 */}
-        <Route path="/community/*" element={<CommunityPage/>}/>
+        <Route path="/community/*" element={<CommunityPage />}/>
 
         {/* 마이 페이지 */}
         <Route path="/my-page/*" element={<MyPage />} />

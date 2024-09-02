@@ -1,14 +1,11 @@
-import { Route, Routes } from "react-router-dom";
-import AllPosts from "../components/community/AllPosts";
+import PostList from "../components/community/PostList";
+import style from './styles/Community.module.css';
 
 const CommunityPage = () => {
     return (
-        <>
-          <div>CommunityPage</div>
-          <Routes>
-            <Route path="/" element={<AllPosts/>} />
-          </Routes>
-        </>
+        <div className={style.container}>
+          <PostList />
+        </div>
     );
 };
 
