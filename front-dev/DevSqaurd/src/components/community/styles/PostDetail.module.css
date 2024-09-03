@@ -1,0 +1,114 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px 20px 19px;
+}
+
+.header {
+  position: relative;
+  z-index: 105;
+  padding-left: 20px;
+}
+
+.author {
+  font-size: 12px;
+  margin-top: 16px;
+}
+
+
+/* 인포(작성) 좋아요 댓글수 에 대한 css */
+.info {
+  margin: 16px 14px 16px 0;
+  color: #94969b;
+  vertical-align: top;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.25em;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+}
+
+.info span {
+  display: flex;
+  align-items: center; 
+  margin-right: 15px;
+  gap: 5px;
+}
+
+.info span:last-child {
+  margin-right: 0;
+}
+
+.date, .views, .comments {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  margin-right: 15px;
+}
+
+.views {
+  margin-right: 15px;
+}
+
+.comments {
+  margin-right: 0;
+}
+
+
+/* 내용에 대한 css */
+.contentBox {
+  border-top: 1px solid #eee;
+  word-wrap: break-word;
+  word-break: break-word;
+  padding-left: 20px;
+}
+
+.content {
+  margin-top: 24px;
+  line-height: 1.6em;
+  font-size: 15px;
+}
+
+/* 푸터 인포 */
+.footer {
+  position: relative;
+  margin-top: 30px;
+  padding: 26px 0;
+  border-top: 0;
+  padding-left: 20px;
+}
+
+.footer .info {
+  color: #222;
+  font-size: 14px;
+  line-height: 1.25em;
+  word-wrap: break-word;
+}
+
+/* 코멘트 박스 */
+.comments {
+  margin: 0 0 -1px;
+  padding: 23px 0 24px;
+  border-top: 1px solid #eee;
+  display: inline;
+}
+
+.comments h3 {
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.commentInput {
+  
+}
+
+.commentsList {
+  margin-top: 20px;
+  padding: 8px 20px 15px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}

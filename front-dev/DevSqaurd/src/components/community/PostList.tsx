@@ -12,11 +12,11 @@ interface Post {
 // 개별 게시물 항목 컴포넌트
 const PostItem: React.FC<Post> = ({ id, title, author, date, hits }) => (
   <tr className={style.postItem}>
-    <th>{id}</th>
-    <th>{title}</th>
-    <th>{author}</th>
-    <th>{date}</th>
-    <th>{hits}</th>
+    <td>{id}</td>
+    <td>{title}</td>
+    <td>{author}</td>
+    <td>{date}</td>
+    <td>{hits}</td>
   </tr>
 );
 
@@ -25,8 +25,6 @@ export default function PostList() {
 
   useEffect(() => {
     // 데이터를 API에서 가져오는 부분
-
-    // 예시로 하드코딩된 데이터
     const fetchPosts = async () => {
       // 예시 데이터
       const examplePosts: Post[] = [
@@ -41,9 +39,9 @@ export default function PostList() {
 
   return (
     <div className={style.postListContainer}>
-      <h4>게시판</h4>
+      <h4 className={style.title}>게시판</h4>
       <table className={style.postTable}>
-        <thead>
+        <thead className={style.headerItem}>
           <tr>
             <th>글번호</th>
             <th>제목</th>
@@ -53,17 +51,16 @@ export default function PostList() {
           </tr>
         </thead>
         <tbody>
-          {
-            posts.map((post, idx) => (
-              <PostItem 
-                id={idx+1} 
-                title={post.title} 
-                author={post.author} 
-                date={post.date} 
-                hits={post.hits}
-              />
-            ))
-          }
+          {posts.map((post) => (
+            <PostItem
+              key={post.id}
+              id={post.id}
+              title={post.title}
+              author={post.author}
+              date={post.date}
+              hits={post.hits}
+            />
+          ))}
         </tbody>
       </table>
     </div>

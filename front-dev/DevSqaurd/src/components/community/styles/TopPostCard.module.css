@@ -1,39 +1,63 @@
 .container {
-  width: 100%;
-  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
 }
 
-h3 {
-  margin-bottom: 20px;
-  font-size: 20px;
+.title {
+  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 15px 0;
 }
 
 .postList {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .postRow {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
 }
 
-.postRow.header {
-  font-weight: bold;
-  border-bottom: 2px solid #000;
+.postRow:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.postRow:last-child {
+  border-bottom: none;
 }
 
 .postIdx, .postTitle, .postLikes, .postViews {
   flex: 1;
-  text-align: center;
 }
 
 .postTitle {
-  flex: 3;
-  text-align: left;
-  padding-left: 10px;
+  flex: 5;
+}
+
+.postIdx {
+  font-weight: bold;
+}
+
+.postTitle {
+
+}
+
+.postLikes, .postViews {
+  color: #555;
 }
