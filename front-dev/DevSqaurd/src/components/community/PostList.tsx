@@ -6,14 +6,18 @@ interface Post {
   title: string;
   author: string;
   date: string;
+  hits: number;
 }
 
 // 개별 게시물 항목 컴포넌트
-const PostItem: React.FC<Post> = ({ title, author, date }) => (
-  <div className={style.postItem}>
-    <h5 className={style.postTitle}>{title}</h5>
-    <p className={style.postMeta}>{author} | {date}</p>
-  </div>
+const PostItem: React.FC<Post> = ({ id, title, author, date, hits }) => (
+  <tr className={style.postItem}>
+    <th>{id}</th>
+    <th>{title}</th>
+    <th>{author}</th>
+    <th>{date}</th>
+    <th>{hits}</th>
+  </tr>
 );
 
 export default function PostList() {
@@ -26,8 +30,8 @@ export default function PostList() {
     const fetchPosts = async () => {
       // 예시 데이터
       const examplePosts: Post[] = [
-        { id: 1, title: '첫 번째 게시물', author: '작성자1', date: '2024-09-01'},
-        { id: 2, title: '두 번째 게시물', author: '작성자2', date: '2024-09-02'}
+        { id: 1, title: '첫 번째 게시물', author: '작성자1', date: '2024-09-01', hits: 47 },
+        { id: 2, title: '두 번째 게시물', author: '작성자2', date: '2024-09-02', hits: 35 }
       ];
       setPosts(examplePosts);
     };
@@ -37,18 +41,31 @@ export default function PostList() {
 
   return (
     <div className={style.postListContainer}>
-      <h4 className={style.header}>게시글</h4>
-      <div className={style.postList}>
-        {posts.map(post => (
-          <PostItem 
-            key={post.id}
-            id={post.id}
-            title={post.title} 
-            author={post.author} 
-            date={post.date} 
-          />
-        ))}
-      </div>
+      <h4>게시판</h4>
+      <table className={style.postTable}>
+        <thead>
+          <tr>
+            <th>글번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            posts.map((post, idx) => (
+              <PostItem 
+                id={idx+1} 
+                title={post.title} 
+                author={post.author} 
+                date={post.date} 
+                hits={post.hits}
+              />
+            ))
+          }
+        </tbody>
+      </table>
     </div>
   );
 }

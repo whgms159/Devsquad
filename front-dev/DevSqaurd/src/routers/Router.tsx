@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import MainPage from "../pages/MainPage";
-import CommunityPage from "../pages/CommunityPage";
+import CommunityPage from "../pages/community/CommunityPage";
 import ProjectPage from "../pages/ProjectPage";
 import MyPage from "../pages/MyPage";
 
