@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import SideBar from "../components/mypage/SideBar";
-import MypageMain from "../components/mypage/MypageMain";
+import MypageMain from "../components/mypage/mypage_main/MypageMain";
 
 const MyPage = () => {
   return (
