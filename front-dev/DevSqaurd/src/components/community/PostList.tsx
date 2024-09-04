@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import style from './styles/PostList.module.css';
+import { useNavigate } from 'react-router-dom';
 
 interface Post {
   id: number;
@@ -22,6 +23,11 @@ const PostItem: React.FC<Post> = ({ id, title, author, date, hits }) => (
 
 export default function PostList() {
   const [posts, setPosts] = useState<Post[]>([]);
+  const navigate = useNavigate();
+
+  const handleCreateForm = () => {
+    navigate("/community/write");
+  };
 
   useEffect(() => {
     // 데이터를 API에서 가져오는 부분
@@ -40,6 +46,7 @@ export default function PostList() {
   return (
     <div className={style.postListContainer}>
       <h4 className={style.title}>게시판</h4>
+      <button onClick={handleCreateForm}>글 작성</button>
       <table className={style.postTable}>
         <thead className={style.headerItem}>
           <tr>

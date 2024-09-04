@@ -5,6 +5,7 @@ import CommunityPage from "../pages/community/CommunityPage";
 import ProjectPage from "../pages/ProjectPage";
 import MyPage from "../pages/MyPage";
 import PostDetail from "../components/community/PostDetail";
+import PostForm from "../components/community/PostForm";
 
 export default function Router() {
   return (
@@ -20,6 +21,7 @@ export default function Router() {
         {/* 커뮤니티 페이지 */}
         <Route path="/community/*" element={<CommunityPage />}/>
         <Route path="/community/detail/:id" element={<PostDetail />} />
+        <Route path="/community/write" element={<PostForm />} />
 
         {/* 마이 페이지 */}
         <Route path="/my-page/*" element={<MyPage />} />
