@@ -12,7 +12,7 @@ export default function PostForm() {
   const handleSavePost = () => {
     
   };
-
+  // 제목, 내용, 카테고리 필요
   return (
     <div className={style.container}>
       <h4>글 작성 페이지</h4>
