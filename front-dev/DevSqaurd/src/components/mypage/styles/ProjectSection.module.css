@@ -1,11 +1,10 @@
 .projectContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 자동으로 열을 맞추고, 최소 너비는 200px */
-  gap: 1rem; /* 카드 사이의 간격 */
-  justify-content: center; /* 가운데 정렬 */
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 1rem; 
+  justify-content: center;
   padding: 0 1rem;
-  max-width: 70vw; /* 프로필 카드와 동일한 너비 */
+  max-width: 70vw; 
 }
   
   .projectCard {

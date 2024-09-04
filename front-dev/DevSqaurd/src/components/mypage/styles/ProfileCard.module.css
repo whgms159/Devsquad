@@ -5,7 +5,7 @@
   border-radius: 8px;
   background-color: white;
   border: 1px solid #dcdcdc;
-  width: 70vw; /* 프로필 카드 너비 설정 */
+  width: 70vw;
   max-width: 1000px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
