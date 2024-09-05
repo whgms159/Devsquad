@@ -47,8 +47,10 @@ export default function PostList() {
   return (
     <div className={style.postListContainer}>
       <h4 className={style.title}>게시판</h4>
-      <SearchBox />
-      <button onClick={handleCreateForm}>글 작성</button>
+      <div className={style.SearchAndCreate}>
+        <SearchBox />
+        <button onClick={handleCreateForm}>글 작성</button>
+      </div>
       <table className={style.postTable}>
         <thead className={style.headerItem}>
           <tr>

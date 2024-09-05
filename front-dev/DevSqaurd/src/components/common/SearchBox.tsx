@@ -37,6 +37,17 @@ const SearchBox = () => {
         ),
       }}
       fullWidth
+      sx={{
+        width: '300px',
+        height: '30px',
+        '& .MuiInputBase-input': {
+          fontSize: '14px',
+        },
+        '& .MuiSvgIcon-root': {
+          fontSize: '20px',
+        },
+        borderRadius: '16px'
+      }}
     />
   );
 };
