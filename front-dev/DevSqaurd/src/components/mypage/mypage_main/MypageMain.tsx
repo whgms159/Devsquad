@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileCard from "./ProfileCard";
-import style from "../styles/MypageMain.module.css"
+import style from "../styles/mypage_main/MypageMain.module.css"
 import ProjectSection from "./ProjectSection";
 
 const MypageMain: React.FC = () => {

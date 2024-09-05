@@ -1,4 +1,4 @@
-import style from "../styles/ProjectSection.module.css"
+import style from "../styles/mypage_main/ProjectSection.module.css"
 import React from "react"
 import ProjectCard from "./ProjectCard"
 

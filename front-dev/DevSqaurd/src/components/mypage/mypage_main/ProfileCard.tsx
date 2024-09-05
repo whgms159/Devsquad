@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../styles/ProfileCard.module.css"
+import style from "../styles/mypage_main/ProfileCard.module.css"
 
 // ProfileCard 컴포넌트 props 타입
 interface ProfileCardProps {
