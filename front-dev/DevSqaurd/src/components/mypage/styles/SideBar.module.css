@@ -21,7 +21,9 @@ nav ul {
   border-bottom: 1px solid #ddd;
   font-weight: 500;
   text-align: left;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .menuItem:last-child {
