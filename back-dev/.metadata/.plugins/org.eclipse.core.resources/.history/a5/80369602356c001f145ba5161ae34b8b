@@ -1,0 +1,5 @@
+spring:
+	application:
+		name: DevSquard
+	datasource:
+    driver-class-name: com.mysql 
