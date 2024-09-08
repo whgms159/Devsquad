@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import style from './styles/PostList.module.css';
 import { useNavigate } from 'react-router-dom';
+import SearchBox from '../common/SearchBox';
 
 interface Post {
   id: number;
@@ -46,6 +47,7 @@ export default function PostList() {
   return (
     <div className={style.postListContainer}>
       <h4 className={style.title}>게시판</h4>
+      <SearchBox />
       <button onClick={handleCreateForm}>글 작성</button>
       <table className={style.postTable}>
         <thead className={style.headerItem}>
