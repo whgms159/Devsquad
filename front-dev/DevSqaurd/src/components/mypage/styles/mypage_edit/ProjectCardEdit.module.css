@@ -1,10 +1,10 @@
 .projectContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 1rem; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
   justify-content: center;
   padding: 0 1rem;
-  max-width: 70vw; 
+  max-width: 70vw;
 }
 
 .projectCard {
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .projectImage {
