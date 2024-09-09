@@ -3,7 +3,7 @@ spring:
     name: DevSquard
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/devsqaurd_db
+    url: jdbc:mysql://localhost:3306/devsquad_db
     username: root
     password: 1234
   jpa:

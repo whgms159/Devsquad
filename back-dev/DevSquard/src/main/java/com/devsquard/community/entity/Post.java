@@ -46,7 +46,7 @@ public class Post {
 	private String content;
 	
 	@Column(nullable = false)
-	private int like = 0;
+	private int likes = 0;
 	
 	@Column(nullable = false)
 	private int hits = 0;
