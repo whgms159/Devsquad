@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const menuItem = [
   { Text: "MY PAGE", Link: "/my-page" },
-  { Text: "프로필수정", Link: "/edit" },
-  { Text: "나의활동", Link: "/activities" },
+  { Text: "프로필수정", Link: "/my-page/edit" },
+  { Text: "나의활동", Link: "/my-page/activities" },
 ];
 
 const SideBar = () => {
