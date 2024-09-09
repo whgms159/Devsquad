@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.devsquard.auth.entity.User;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -32,7 +34,7 @@ public class Project {
 	
 	@JoinColumn(name = "user_id", nullable = false)
 	@ManyToOne
-	private Long userId;
+	private User userId;
 	
 	@Column(nullable = false)
 	private String projectName;
@@ -42,6 +44,7 @@ public class Project {
 	
 	@Column(nullable = false)
 	private String description;
+	
 	
 	@Column(nullable = false)
 	private int participaint;

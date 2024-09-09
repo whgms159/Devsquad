@@ -40,13 +40,13 @@ public class ProjectController {
 		return ResponseEntity.ok(pro);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/{id}")//프로젝트 삭제
 	public ResponseEntity<ProjectResponse> deleteProject(@PathVariable("id") Long id){
 		ProjectResponse dpro = projectService.deleteProject(id);
 		return ResponseEntity.ok(dpro);
 	}
 	
-	@PatchMapping("")
+	@PatchMapping("")//프로젝트 수정
 	public ResponseEntity<ProjectResponse> updateProject(ProjectRequest pro){
 		ProjectResponse upro = projectService.updateProject(pro);
 		return ResponseEntity.ok(upro);

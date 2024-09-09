@@ -38,11 +38,14 @@ public class ProjectService {
 
 	public ProjectResponse deleteProject(Long id) {
 		Project pro = projectRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("없음"));
-		return projectRepository.deleteById(pro.getId());
+		projectRepository.deleteById(pro.getId());
+		return null;
 	}
 
 	public ProjectResponse updateProject(ProjectRequest pro) {
-		return null;
+		Project project = projectRepository.findById(pro.getId()).orElseThrow(() -> new IllegalArgumentException("없음"));
+		Project project2 = projectRepository.save(project);
+		return ProjectResponse.toDTO(project2);
 	}
 
 }
