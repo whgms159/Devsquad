@@ -56,7 +56,7 @@ public class User {
 	private LocalDateTime updatedAt;
 	
 	@Column(name = "is_deleted")
-	private boolean isDeleted = false;
+	private boolean isDeleted;
 	
 	@Column(name = "failed_count")
 	private int failedCount = 0;
@@ -65,8 +65,17 @@ public class User {
 	private LocalDateTime loginedAt;
 	
 	@Column(name = "is_blocked")
-	private boolean isBlock = false;
+	private boolean isBlock;
 	
 	@Column(name = "blocked_at")
 	private LocalDateTime blockedAt;
+	
+	@Column
+	private String language;
+	
+	@Column(name = "hot_level", nullable = false)
+	private int hotLevel = 37;
+	
+	@Column
+	private String intro;
 }
