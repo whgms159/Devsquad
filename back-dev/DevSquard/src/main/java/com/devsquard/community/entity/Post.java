@@ -39,17 +39,17 @@ public class Post {
 	@ManyToOne
 	private User user;
 	
-	@Column
+	@Column(nullable = false)
 	private String title;
 
-	@Column
+	@Column(nullable = false)
 	private String content;
 	
-	@Column
-	private int like;
+	@Column(nullable = false)
+	private int like = 0;
 	
-	@Column
-	private int hits;
+	@Column(nullable = false)
+	private int hits = 0;
 	
 	@CreatedDate
 	@Column(name = "created_at")
@@ -59,6 +59,6 @@ public class Post {
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
 	
-	@Column(name = "is_deleted")
-	private boolean isDeleted;
+	@Column(name = "is_deleted", nullable = false)
+	private boolean isDeleted = false;
 }

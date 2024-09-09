@@ -1,9 +1,11 @@
-package com.devsquard.auth.entity;
+package com.devsquard.community.entity;
 
 import java.time.LocalDateTime;
 
-import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.devsquard.auth.entity.User;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,7 +14,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,32 +22,30 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "userinfo_tbl")
-@EntityListeners(AuditingEntityListener.class)
+@Table(name = "comments_tbl")
+@EntityListeners(AuditingEntityListener.class) // 생성, 수정 날짜 추적 -> Application.java (@EnableJpaAuditing)
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserInfo {
+public class Comment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(updatable = false)
 	private Long id;
 	
 	@JoinColumn(name = "user_id", nullable = false)
-	@OneToOne
+	@ManyToOne
 	private User user;
 	
-	@Column
-	private String language;
+	@JoinColumn(name = "post_id", nullable = false)
+	@ManyToOne
+	private Post post;
 	
-	@Column(name = "hot_level", nullable = false)
-	private int hotLevel;
+	@Column(nullable = false)
+	private String content;
 	
-	@Column
-	private String intro;
-	
-	@LastModifiedDate
-	@Column(name = "updated_at")
-	private LocalDateTime updatedAt;	
+	@CreatedDate
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;	
 }
