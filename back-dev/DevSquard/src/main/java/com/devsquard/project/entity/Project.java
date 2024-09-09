@@ -1,5 +1,6 @@
 package com.devsquard.project.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -57,7 +58,12 @@ public class Project {
 	private LocalDateTime createdAt;
 	
 	@Column(name = "end_at")
-	private LocalDateTime endAt;
+	private LocalDate endAt;
+	
+	@Column(name = "started_at")
+	private LocalDate startedAt;
+	
+	//시작일자, 타입
 	
 	
 }
