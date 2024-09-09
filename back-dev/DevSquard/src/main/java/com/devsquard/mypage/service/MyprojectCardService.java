@@ -3,6 +3,6 @@ package com.devsquard.mypage.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProfileService {
+public class MyprojectCardService {
 
 }
