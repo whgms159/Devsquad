@@ -34,7 +34,7 @@ public class ProjectController {
 		return ResponseEntity.ok(li);
 	}
 	
-	@GetMapping("")//특정 프로젝트 보기
+	@GetMapping("/{id}")//특정 프로젝트 보기
 	public ResponseEntity<ProjectResponse> getProject(Long id){
 		ProjectResponse pro = projectService.getProject(id);
 		return ResponseEntity.ok(pro);
