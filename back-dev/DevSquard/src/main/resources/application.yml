@@ -8,7 +8,7 @@ spring:
     password: 1234
   jpa:
     generate-ddl: true
-    show-sql:  true
+    show-sql: true
     open-in-view: false
     properties:
       hibernate:
@@ -18,7 +18,16 @@ spring:
       mode: never
   upload:
     location: C://Users//WD//Desktop//post-image
-# 스웨거 설정
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher
+  security:
+    user:
+      name: admin
+      password: password
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
