@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.devsquard.project.domain.ProjectRequest;
 import com.devsquard.project.domain.ProjectResponse;
@@ -17,7 +19,8 @@ import com.devsquard.project.service.ProjectService;
 
 import lombok.RequiredArgsConstructor;
 
-@Controller
+@RestController
+@RequestMapping("/project")
 @RequiredArgsConstructor
 public class ProjectController {
 	private final ProjectService projectService;
@@ -34,13 +37,8 @@ public class ProjectController {
 		return ResponseEntity.ok(li);
 	}
 	
-<<<<<<< HEAD
-	@GetMapping("{id}")//특정 프로젝트 보기
-	public ResponseEntity<ProjectResponse> getProject(@PathVariable("id") Long id){
-=======
 	@GetMapping("/{id}")//특정 프로젝트 보기
-	public ResponseEntity<ProjectResponse> getProject(Long id){
->>>>>>> 97b72a9442b409fa42bc8b3a97397b00cd2da719
+	public ResponseEntity<ProjectResponse> getProject(@PathVariable("id") Long id){
 		ProjectResponse pro = projectService.getProject(id);
 		return ResponseEntity.ok(pro);
 	}

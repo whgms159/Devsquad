@@ -2,22 +2,23 @@ package com.devsquard.project.memberController;
 
 import java.util.List;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.devsquard.project.memberDomain.ProjectMemberRequest;
 import com.devsquard.project.memberDomain.ProjectMemberResponse;
-import com.devsquard.project.memberEntity.ProjectMember;
 import com.devsquard.project.memberService.ProjectMemberServie;
 
 import lombok.RequiredArgsConstructor;
 
-@Controller
+@RestController
+@RequestMapping("/member")
 @RequiredArgsConstructor
 public class ProjectMemberController {
 	private final ProjectMemberServie projectMemberService;
@@ -25,8 +26,9 @@ public class ProjectMemberController {
 	//추가
 	@PostMapping("")
 	public ResponseEntity<ProjectMemberResponse> addProjectMember(ProjectMemberRequest pro){
-		ProjectMemberResponse savedProjectMember = projectMemberService.addProjectMember(pro);
-		return ResponseEntity.status(HttpStatus.CREATED).body(savedProjectMember);
+//		ProjectMemberResponse savedProjectMember = projectMemberService.addProjectMember(pro);
+//		return ResponseEntity.status(HttpStatus.CREATED).body(savedProjectMember);
+		return null;
 	}
 	
 	//삭제
@@ -44,7 +46,7 @@ public class ProjectMemberController {
 	}
 	
 	//프로젝트 신청
-	@PostMapping("/a")
+	@PostMapping("/{id}")
 	public ResponseEntity<ProjectMemberResponse> joinProject(Long proId, Long memId){
 		ProjectMemberResponse memJoin = projectMemberService.joinProject(proId,memId);
 		return ResponseEntity.ok(memJoin);

@@ -8,9 +8,6 @@ import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
 public class CategoryController {
-	private final CategoryService categoryService;
-	
-	@PostMapping("")//태그 등록
-	public 
+
 
 }
