@@ -9,8 +9,12 @@ import lombok.Data;
 @Data
 public class ProjectMemberResponse {
 	private String position;
+	private String name;
 	
 	public static ProjectMemberResponse toDTO(ProjectMember projectMember) {
-		return ProjectMemberResponse.builder().position(projectMember.getPosition()).build();
+		return ProjectMemberResponse.builder()
+				.position(projectMember.getPosition())
+				.name(projectMember.getUser().getName())			
+				.build();
 	}
 }
