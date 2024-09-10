@@ -62,8 +62,11 @@ public class Project {
 	
 	@Column(name = "started_at")
 	private LocalDate startedAt;
+<<<<<<< HEAD
 	
 	//시작일자, 타입
+=======
+>>>>>>> 97b72a9442b409fa42bc8b3a97397b00cd2da719
 	
 	
 }

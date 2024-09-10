@@ -28,14 +28,19 @@ public class ProjectController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(savedpro);
 	}
 	
-	@GetMapping("")//프로젝트 리스트
+	@GetMapping("")//프로젝트 전체 리스트
 	public ResponseEntity<List<ProjectResponse>> getAllProject(){
 		List<ProjectResponse> li = projectService.getAllProject();
 		return ResponseEntity.ok(li);
 	}
 	
+<<<<<<< HEAD
 	@GetMapping("{id}")//특정 프로젝트 보기
 	public ResponseEntity<ProjectResponse> getProject(@PathVariable("id") Long id){
+=======
+	@GetMapping("/{id}")//특정 프로젝트 보기
+	public ResponseEntity<ProjectResponse> getProject(Long id){
+>>>>>>> 97b72a9442b409fa42bc8b3a97397b00cd2da719
 		ProjectResponse pro = projectService.getProject(id);
 		return ResponseEntity.ok(pro);
 	}
