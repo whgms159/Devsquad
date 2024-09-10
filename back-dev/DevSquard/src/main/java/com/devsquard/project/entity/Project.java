@@ -62,8 +62,6 @@ public class Project {
 	
 	@Column(name = "started_at")
 	private LocalDate startedAt;
-	
-	//시작일자, 타입
-	
+
 	
 }
