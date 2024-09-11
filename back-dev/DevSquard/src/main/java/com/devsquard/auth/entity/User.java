@@ -2,14 +2,23 @@ package com.devsquard.auth.entity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.devsquard.auth.domain.RoleEnum;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -26,7 +35,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class User implements UserDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(updatable = false)
@@ -56,7 +65,7 @@ public class User {
 	private LocalDateTime updatedAt;
 	
 	@Column(name = "is_deleted")
-	private boolean isDeleted;
+	private boolean isDeleted = false;
 	
 	@Column(name = "failed_count")
 	private int failedCount = 0;
@@ -65,7 +74,7 @@ public class User {
 	private LocalDateTime loginedAt;
 	
 	@Column(name = "is_blocked")
-	private boolean isBlock;
+	private boolean isBlock = false;
 	
 	@Column(name = "blocked_at")
 	private LocalDateTime blockedAt;
@@ -78,4 +87,21 @@ public class User {
 	
 	@Column
 	private String intro;
+	
+	@Column(nullable = false)
+	@Enumerated(EnumType.STRING)
+	@Builder.Default
+	private RoleEnum role = RoleEnum.ROLE_USER; // 기본으로 USER 부여
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// 권한 목록 반환
+		return List.of(new SimpleGrantedAuthority(role.name()));
+	}
+
+	// 유저의 email을 유니크 키로 사용
+	@Override
+	public String getUsername() {
+		return email;
+	}
 }
