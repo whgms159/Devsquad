@@ -13,6 +13,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import com.devsquard.auth.repository.UserRepository;
 import com.devsquard.common.jwt.JwtProperties;
 import com.devsquard.common.jwt.JwtProvider;
+import com.devsquard.common.utils.TokenUtils;
 
 import lombok.RequiredArgsConstructor;
 
@@ -30,6 +31,9 @@ public class WebSecurityConfig {
 	}
 	
 	// TokenUtils 생성자 호출
+	private TokenUtils tokenUtils() {
+		return new TokenUtils(jwtProvider());
+	}
 	
 	// JwtAuthenticationService 생성자 호출
 	
