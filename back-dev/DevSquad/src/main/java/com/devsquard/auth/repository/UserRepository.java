@@ -1,4 +1,4 @@
-package com.devsquard.auth;
+package com.devsquard.auth.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

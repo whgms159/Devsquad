@@ -2,10 +2,10 @@ package com.devsquard.auth.service;
 
 import org.springframework.stereotype.Service;
 
-import com.devsquard.auth.UserRepository;
 import com.devsquard.auth.domain.SignUpRequest;
 import com.devsquard.auth.domain.SignUpResponse;
 import com.devsquard.auth.entity.User;
+import com.devsquard.auth.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
