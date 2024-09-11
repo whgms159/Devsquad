@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.crypto.SecretKey;
 
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 import com.devsquard.auth.entity.User;
@@ -18,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @RequiredArgsConstructor
 public class JwtProvider {
+	private final UserDetailsService userDetailsService;
 	private final JwtProperties jwtProperties;
 
 	// accessToken 생성
