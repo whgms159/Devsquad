@@ -64,8 +64,8 @@ public class User implements UserDetails {
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
 	
-	@Column(name = "is_deleted")
-	private boolean isDeleted = false;
+	@Column(name = "deleted_at", nullable = true)
+	private LocalDateTime deletedAt;
 	
 	@Column(name = "failed_count")
 	private int failedCount = 0;
@@ -92,6 +92,9 @@ public class User implements UserDetails {
 	@Enumerated(EnumType.STRING)
 	@Builder.Default
 	private RoleEnum role = RoleEnum.ROLE_USER; // 기본으로 USER 부여
+	
+	@Column(name="refresh_token", nullable = true)
+	private String refreshToken;
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
