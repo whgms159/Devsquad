@@ -35,7 +35,7 @@ public class Project {
 	
 	@JoinColumn(name = "user_id", nullable = false)
 	@ManyToOne
-	private User userId;
+	private User user;
 	
 	@Column(nullable = false)
 	private String projectName;

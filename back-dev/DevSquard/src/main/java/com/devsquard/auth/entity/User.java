@@ -2,15 +2,13 @@ package com.devsquard.auth.entity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-<<<<<<< HEAD
-import java.util.HashSet;
-import java.util.Set;
-=======
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
->>>>>>> 6b63b0b2b0ae511eca3b2c72c7c2df1da242456d
+import java.util.Set;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
@@ -24,15 +22,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
-<<<<<<< HEAD
-import jakarta.persistence.FetchType;
-=======
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
->>>>>>> 6b63b0b2b0ae511eca3b2c72c7c2df1da242456d
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -99,8 +92,7 @@ public class User implements UserDetails {
 	
 	@Column
 	private String intro;
-	
-<<<<<<< HEAD
+
 	@Column(name = "streak_count")
 	private int streakCount = 0;
 	
@@ -108,7 +100,7 @@ public class User implements UserDetails {
 	@CollectionTable(name = "user_streaks", joinColumns = @JoinColumn(name = "user_id"))
 	@Column(name = "streak_date")
 	private Set<LocalDate> streakDates = new HashSet<>();
-=======
+
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	@Builder.Default
@@ -125,5 +117,4 @@ public class User implements UserDetails {
 	public String getUsername() {
 		return email;
 	}
->>>>>>> 6b63b0b2b0ae511eca3b2c72c7c2df1da242456d
 }

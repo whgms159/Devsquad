@@ -1,7 +1,11 @@
 package com.devsquard.project.project.domain;
 
+import java.time.LocalDate;
+
+import com.devsquard.auth.entity.User;
 import com.devsquard.project.project.entity.Project;
 
+import jakarta.persistence.Column;
 import lombok.Data;
 
 @Data
@@ -10,6 +14,8 @@ public class ProjectRequest {
 	private Long id;
 	private String projectName, simpleIntro, description, devStack;
 	private int participaint;
+	private LocalDate endAt;
+	private LocalDate startedAt;
 	
 	public Project toEntity() {
 		return Project.builder()
