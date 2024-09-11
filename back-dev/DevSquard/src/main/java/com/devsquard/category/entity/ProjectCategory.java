@@ -1,6 +1,6 @@
 package com.devsquard.category.entity;
 
-import com.devsquard.project.entity.Project;
+import com.devsquard.project.project.entity.Project;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
