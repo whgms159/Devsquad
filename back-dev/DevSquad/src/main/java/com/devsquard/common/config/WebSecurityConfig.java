@@ -50,7 +50,10 @@ public class WebSecurityConfig {
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		// 특정 URL에 대한 접근
 		http.authorizeHttpRequests(auth -> 
-			auth.anyRequest().permitAll() // 임시적 모두 허용
+			auth.requestMatchers(
+				"/api/auth/delete"
+			).hasRole("USER")
+			.anyRequest().permitAll() // 임시적 모두 허용
 		);
 		
 		// HTTP 기본 설정
