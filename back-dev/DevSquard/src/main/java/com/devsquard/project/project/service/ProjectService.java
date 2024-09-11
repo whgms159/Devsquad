@@ -3,8 +3,8 @@ package com.devsquard.project.project.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.devsquard.auth.entity.User;
 import com.devsquard.project.project.domain.ProjectRequest;
 import com.devsquard.project.project.domain.ProjectResponse;
 import com.devsquard.project.project.entity.Project;
@@ -23,8 +23,22 @@ public class ProjectService {
     }
 
     public ProjectResponse addProject(ProjectRequest pro) {
-        Project savePro = projectRepository.save(pro.toEntity());
-        return ProjectResponse.toDTO(savePro);
+    	
+    	// Request를 Project 타입으로 변환
+    	Project project = Project.builder()
+    		.id(pro.getId())
+    		.user(new User())
+    		.projectName(pro.getProjectName())
+    		.simpleIntro(pro.getSimpleIntro())
+    		.description(pro.getDescription())
+    		.devStack(pro.getDevStack())
+    		.participaint(pro.getParticipaint())
+    		.endAt(pro.getEndAt())
+    		.startedAt(pro.getStartedAt())
+    		.build();
+    	
+        Project savedPro = projectRepository.save(project);
+        return ProjectResponse.toDTO(savedPro);
     }
 
     public ProjectResponse getProject(Long id) {

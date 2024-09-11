@@ -2,31 +2,18 @@ package com.devsquard.project.project.domain;
 
 import java.time.LocalDate;
 
-import com.devsquard.auth.entity.User;
-import com.devsquard.project.project.entity.Project;
+import lombok.Getter;
+import lombok.ToString;
 
-import jakarta.persistence.Column;
-import lombok.Data;
-
-@Data
+@Getter
+@ToString
 public class ProjectRequest {
-	
-	private Long id;
-	private String projectName, simpleIntro, description, devStack;
-	private int participaint;
-	private LocalDate endAt;
-	private LocalDate startedAt;
-	
-	public Project toEntity() {
-		return Project.builder()
-				.id(id)
-				.projectName(projectName)
-				.simpleIntro(simpleIntro)
-				.description(description)
-				.devStack(devStack)
-				.participaint(participaint)
-				.build();
-	}
-	
-	
+    private Long id;
+    private String projectName;
+    private String simpleIntro;
+    private String description;
+    private String devStack;
+    private int participaint;
+    private LocalDate startedAt;
+    private LocalDate endAt;
 }
