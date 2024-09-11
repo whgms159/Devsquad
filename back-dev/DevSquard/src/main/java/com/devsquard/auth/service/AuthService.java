@@ -18,7 +18,7 @@ public class AuthService {
 	
 	// 회원가입 서비스 계층
 	public SignUpResponse signUp(SignUpRequest req) {
-		User user = com.devsquard.auth.entity.User.builder()
+		User user = User.builder()
 			.name(req.getName())
 			.nickName(req.getNickName())
 			.email(req.getEmail())

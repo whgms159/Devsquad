@@ -11,6 +11,7 @@ import com.devsquard.auth.domain.SignUpRequest;
 import com.devsquard.auth.domain.SignUpResponse;
 import com.devsquard.auth.service.AuthService;
 
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,7 @@ public class AuthController {
 	private final AuthService authService;
 	
 	// 회원 가입
+	@Operation(summary = "회원가입", description = "회원가입을 진행합니다.")
 	@PostMapping("/signup")
 	public ResponseEntity<SignUpResponse> signUp(@RequestBody SignUpRequest req) {
 		log.info("[SignUp] 회원가입 진행 요청 정보 : {}", req);
