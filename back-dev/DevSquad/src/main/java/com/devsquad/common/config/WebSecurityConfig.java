@@ -84,7 +84,7 @@ public class WebSecurityConfig {
 		// CSRF 비활성화
 		http.csrf(AbstractHttpConfigurer::disable);
 		// CORS 비활성화
-		http.cors(AbstractHttpConfigurer::disable);
+		http.cors(corsConfig -> corsConfig.configurationSource(corsConfigurationSource()));
 		
 		return http.getOrBuild();
 	}
@@ -92,7 +92,7 @@ public class WebSecurityConfig {
 	// CORS -> 브라우저가 다른 도메인에서 호스팅되는 리소스에 접근할 수 있도록 허용하는 매커니즘
 	// 주로 클라이언트와 서버가 서로 다른 도메인에서 동작할 때 필요
 	@Bean
-	CorsConfigurationSource configurationSource() {
+	CorsConfigurationSource corsConfigurationSource() {
 		return request -> {
 			// CORS 정책 속성 설정을 위해 생성
 			CorsConfiguration config = new CorsConfiguration();
