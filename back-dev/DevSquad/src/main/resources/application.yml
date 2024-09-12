@@ -29,7 +29,7 @@ spring:
 # jwt 토큰 발행 기초 설정
 jwt:
     issuer: devsquad-team
-    secret_key: devsecretsquadtoken
+    secret_key: devsecretsquadtokenismysecretkey
     access_duration: 1_800_000 # 1800000  # 30분 (30 * 60 * 1000)
     refresh_duration: 86_400_000 # 86400000 # 24시간 (24 * 60 * 60 * 1000)
 
