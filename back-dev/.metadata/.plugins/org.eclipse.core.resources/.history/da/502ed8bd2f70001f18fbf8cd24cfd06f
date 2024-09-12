@@ -1,0 +1,33 @@
+package com.devsquard.project.project.domain;
+
+import java.time.LocalDate;
+
+import com.devsquard.auth.entity.User;
+import com.devsquard.project.project.entity.Project;
+
+import jakarta.persistence.Column;
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class ProjectRequest {
+	
+	private Long id;
+	private Long userId;
+	private String projectName, simpleIntro, description, devStack;
+	private int participaint;
+	private LocalDate endAt;
+	private LocalDate startedAt;
+	
+	public Project toEntity(User user) {
+		return Project.builder()
+				.id(id)
+				.projectName(projectName)
+				.simpleIntro(simpleIntro)
+				.description(description)
+				.devStack(devStack)
+				.participaint(participaint)
+				.build();
+	}
+}
