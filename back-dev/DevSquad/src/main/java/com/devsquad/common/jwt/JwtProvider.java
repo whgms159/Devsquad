@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.crypto.SecretKey;
 
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
@@ -98,6 +100,18 @@ public class JwtProvider {
 		// claim에서 email 추출
 		String email = claims.get("sub", String.class);
 		return email;
+	}
+
+	// 토큰 인증 정보를 반환
+	public Authentication getAuthenticationByToken(String token) {
+		log.info("[getAuthenticationByToken] 토큰 인증 정보 조회");
+		// 이메일을 가져와서
+		String userEmail = getUserEamilByToken(token);
+		// 이메일을 토대로 유저를 찾고
+		User user = (User) userDetailsService.loadUserByUsername(userEmail);
+		// 사용자 정보와 권한을 포함한 Authentication 객체 생성
+		Authentication authentication = new UsernamePasswordAuthenticationToken(user, token, user.getAuthorities());
+		return authentication;
 	}
 
 

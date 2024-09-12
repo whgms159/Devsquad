@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.devsquad.auth.domain.LoginRequest;
 import com.devsquad.auth.domain.LoginResponse;
 import com.devsquad.auth.domain.SignUpRequest;
 import com.devsquad.auth.domain.SignUpResponse;
@@ -73,7 +74,7 @@ public class AuthController {
 	}
 	
 	// 토큰 재발급
-	@Operation(summary = "토큰 재발급", description = "토큰일 재발급합니다.")
+	@Operation(summary = "토큰 재발급", description = "토큰을 재발급합니다.")
 	@PostMapping("/refresh-token")
 	public ResponseEntity<LoginResponse> refreshToken(HttpServletRequest req, HttpServletResponse res) {
 		// 토큰 요청
