@@ -52,7 +52,7 @@ public class JwtProvider {
 			.and()
 			.issuer(jwtProperties.getIssuer()) // 발행자 정보
 			.issuedAt(new Date()) // 발행일시
-			.expiration(new Date()) // 만료 시간
+			.expiration(expiredDate) // 만료 시간
 			.subject(user.getEmail()) // 토큰의 주제(Subject) 설정 _ 사용자 이메일
 			.claim("id", user.getId())
 			.claim("role", user.getRole().name())
@@ -69,7 +69,7 @@ public class JwtProvider {
 	
 	// 유효한 토큰인지 검증
 	public boolean validateToken(String token) {
-		log.info("[validateToken] 토큰 검증 시작");
+		log.info("[validateToken] 토큰 검증 시작 {}", token);
 		try {
 			Jwts.parser()
 				.verifyWith(getSecretKey()) // 비밀키로 서명을 검증

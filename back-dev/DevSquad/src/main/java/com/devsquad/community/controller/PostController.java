@@ -22,8 +22,9 @@ import com.devsquad.community.service.PostService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
-
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @Tag(name = "커뮤니티", description = "커뮤니티 관련 API")
@@ -35,6 +36,7 @@ public class PostController {
 	@Operation(summary = "게시글 작성", description = "게시물을 작성합니다.")
 	@PostMapping("")
 	public ResponseEntity<PostResponse> createPost(@ModelAttribute PostRequest post) {
+		log.info("[createPost] 게시글 작성 요청 : {}", post);
 		// post를 서비스로 던져서 부탁하기
 		PostResponse savedPost = postService.insertPost(post);
 		// 201을 반환, 반환된 객체는 저장된 게시글 정보를 포함
