@@ -5,17 +5,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.devsquad.auth.entity.User;
+import com.devsquad.auth.repository.UserRepository;
 import com.devsquad.community.domain.PostRequest;
 import com.devsquad.community.domain.PostResponse;
 import com.devsquad.community.entity.Post;
 import com.devsquad.community.repository.PostRepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class PostService {
 	private final PostRepository postRepository; 
+	private final UserRepository userRepository;
 	
 	// { 게시글 전체 조회 }
 	public List<PostResponse> getAllPost() {
@@ -56,13 +61,10 @@ public class PostService {
 	
 	// { 게시글 작성 }
 	public PostResponse insertPost(PostRequest postDTO) {
-		// 유저를 찾아서
-		// User user = userRepository.findById(postDTO.getUserId()).orElseThrow(() -> new IllegalArgumentException("해당 유저가 없습니다."));
-		// Post post = postDTO.toEntity(user);
-		// Post savedPost = postRepository.save(post);
-		
-		// 임시 방편
-		Post post = postDTO.toEntity(null);
+		 // 유저를 찾아서
+		log.info("유저 ID 정보 : {}", postDTO.getUserId());
+		User user = userRepository.findById(postDTO.getUserId()).orElseThrow(() -> new IllegalArgumentException("해당 유저가 없습니다."));
+		Post post = postDTO.toEntity(user);
 		Post savedPost = postRepository.save(post);
 		
 		// 타입 변환해서 result로 저장

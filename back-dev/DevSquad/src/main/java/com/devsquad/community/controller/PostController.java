@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +36,7 @@ public class PostController {
 	// { 게시글 생성 }
 	@Operation(summary = "게시글 작성", description = "게시물을 작성합니다.")
 	@PostMapping("")
-	public ResponseEntity<PostResponse> createPost(@ModelAttribute PostRequest post) {
+	public ResponseEntity<PostResponse> createPost(@RequestBody PostRequest post) {
 		log.info("[createPost] 게시글 작성 요청 : {}", post);
 		// post를 서비스로 던져서 부탁하기
 		PostResponse savedPost = postService.insertPost(post);
