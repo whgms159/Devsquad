@@ -101,7 +101,7 @@ public class WebSecurityConfig {
 			// 허용되는 HTTP 메서드 목록 설정 -> *를 통해 모든 메서드 허용(GET, POST ... etc)
 			config.setAllowedMethods(Collections.singletonList("*"));
 			// 허용할 도메인 패턴 설정 -> 클라이언트 도메인을 해주면 된다.
-			config.setAllowedOriginPatterns(Collections.singletonList("http://localhost:3000"));
+			config.setAllowedOriginPatterns(Collections.singletonList("http://localhost:5173"));
 			// 자격증명(쿠키, 인증 헤더 ... )을 포함한 요청을 허용할지 결정 -> true 설정으로 클라이언트가 자격증명 요청을 서버로 전송 가능
 			config.setAllowCredentials(true);
 			return config;
