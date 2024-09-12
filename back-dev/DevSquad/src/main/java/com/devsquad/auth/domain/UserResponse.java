@@ -1,6 +1,6 @@
-package com.devsquard.auth.domain;
+package com.devsquad.auth.domain;
 
-import com.devsquard.auth.entity.User;
+import com.devsquad.auth.entity.User;
 
 import lombok.Builder;
 import lombok.Data;

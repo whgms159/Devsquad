@@ -1,10 +1,7 @@
 package com.devsquad.category.entity;
 
-<<<<<<< HEAD:back-dev/DevSquard/src/main/java/com/devsquard/category/entity/ProjectCategory.java
-import com.devsquard.project.project.entity.Project;
-=======
-import com.devsquad.project.entity.Project;
->>>>>>> c6ffdaa0de915e0bfd251556b822503846878995:back-dev/DevSquad/src/main/java/com/devsquad/category/entity/ProjectCategory.java
+
+import com.devsquad.project.project.entity.Project;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
