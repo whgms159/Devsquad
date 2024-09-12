@@ -2,6 +2,7 @@ package com.devsquard.project.member.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.devsquard.auth.entity.User;
 import com.devsquard.project.member.domain.ProjectMemberRequest;
 import com.devsquard.project.member.domain.ProjectMemberResponse;
 import com.devsquard.project.member.service.ProjectMemberServie;
@@ -28,10 +30,9 @@ public class ProjectMemberController {
 	//추가
 	@Operation(summary = "프로젝트 멤버 추가", description = "프로젝트 멤버를 추가합니다.")
 	@PostMapping("")
-	public ResponseEntity<ProjectMemberResponse> addProjectMember(ProjectMemberRequest pro){
-//		ProjectMemberResponse savedProjectMember = projectMemberService.addProjectMember(pro);
-//		return ResponseEntity.status(HttpStatus.CREATED).body(savedProjectMember);
-		return null;
+	public ResponseEntity<ProjectMemberResponse> addProjectMember(ProjectMemberRequest pro, User user){
+		ProjectMemberResponse savedProjectMember = projectMemberService.addProjectMember(pro, user);
+		return ResponseEntity.status(HttpStatus.CREATED).body(savedProjectMember);
 	}
 	
 	//삭제

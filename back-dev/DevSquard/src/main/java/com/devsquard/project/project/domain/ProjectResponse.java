@@ -21,6 +21,7 @@ public class ProjectResponse {
 	public static ProjectResponse toDTO(Project project) {
 		 return ProjectResponse.builder()
 				 .id(project.getId())
+				 .user(project.getUser())
 				 .projectName(project.getProjectName())
 				 .simpleIntro(project.getSimpleIntro())
 				 .description(project.getDescription())
