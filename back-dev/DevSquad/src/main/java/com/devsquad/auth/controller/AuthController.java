@@ -58,6 +58,7 @@ public class AuthController {
 	}
 	
 	// 회원 정보 수정
+	// 수정 고민
 	
 	// 회원 탈퇴
 	@Operation(summary = "회원탈퇴", description = "회원탈퇴를 Soft-Delete로 진행합니다.")
