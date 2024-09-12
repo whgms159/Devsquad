@@ -1,7 +1,7 @@
-package com.devsquard.community.domain;
+package com.devsquad.community.domain;
 
-import com.devsquard.auth.entity.User;
-import com.devsquard.community.entity.Post;
+import com.devsquad.auth.entity.User;
+import com.devsquad.community.entity.Post;
 
 import lombok.Data;
 

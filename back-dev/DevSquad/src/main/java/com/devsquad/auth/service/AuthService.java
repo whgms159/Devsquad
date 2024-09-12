@@ -1,4 +1,4 @@
-package com.devsquard.auth.service;
+package com.devsquad.auth.service;
 
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -7,13 +7,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.devsquard.auth.domain.SignUpRequest;
-import com.devsquard.auth.domain.SignUpResponse;
-import com.devsquard.auth.domain.UserDeleteRequest;
-import com.devsquard.auth.entity.User;
-import com.devsquard.auth.repository.UserRepository;
-import com.devsquard.common.jwt.JwtProvider;
-import com.devsquard.common.utils.TokenUtils;
+import com.devsquad.auth.domain.SignUpRequest;
+import com.devsquad.auth.domain.SignUpResponse;
+import com.devsquad.auth.domain.UserDeleteRequest;
+import com.devsquad.auth.entity.User;
+import com.devsquad.auth.repository.UserRepository;
+import com.devsquad.common.jwt.JwtProvider;
+import com.devsquad.common.utils.TokenUtils;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

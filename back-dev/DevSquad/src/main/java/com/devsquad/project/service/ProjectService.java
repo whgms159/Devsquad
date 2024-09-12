@@ -1,14 +1,14 @@
-package com.devsquard.project.service;
+package com.devsquad.project.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.devsquard.project.domain.ProjectRequest;
-import com.devsquard.project.domain.ProjectResponse;
-import com.devsquard.project.entity.Project;
-import com.devsquard.project.repository.ProjectRepository;
+import com.devsquad.project.domain.ProjectRequest;
+import com.devsquad.project.domain.ProjectResponse;
+import com.devsquad.project.entity.Project;
+import com.devsquad.project.repository.ProjectRepository;
 
 import lombok.RequiredArgsConstructor;
 

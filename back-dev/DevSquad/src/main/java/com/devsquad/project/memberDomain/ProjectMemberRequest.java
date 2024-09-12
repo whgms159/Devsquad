@@ -1,8 +1,8 @@
-package com.devsquard.project.memberDomain;
+package com.devsquad.project.memberDomain;
 
-import com.devsquard.auth.entity.User;
-import com.devsquard.project.entity.Project;
-import com.devsquard.project.memberEntity.ProjectMember;
+import com.devsquad.auth.entity.User;
+import com.devsquad.project.entity.Project;
+import com.devsquad.project.memberEntity.ProjectMember;
 
 import lombok.Data;
 

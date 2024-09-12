@@ -1,4 +1,4 @@
-package com.devsquard.common.config;
+package com.devsquad.common.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,6 +1,6 @@
-package com.devsquard.category.entity;
+package com.devsquad.category.entity;
 
-import com.devsquard.auth.entity.User;
+import com.devsquad.auth.entity.User;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

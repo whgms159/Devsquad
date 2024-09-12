@@ -1,11 +1,11 @@
-package com.devsquard.auth.service;
+package com.devsquad.auth.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.devsquard.auth.repository.UserRepository;
+import com.devsquad.auth.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

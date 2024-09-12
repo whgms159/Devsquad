@@ -1,4 +1,4 @@
-package com.devsquard.community.controller;
+package com.devsquad.community.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsquard.community.domain.PostRequest;
-import com.devsquard.community.domain.PostResponse;
-import com.devsquard.community.service.PostService;
+import com.devsquad.community.domain.PostRequest;
+import com.devsquad.community.domain.PostResponse;
+import com.devsquad.community.service.PostService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

@@ -1,4 +1,4 @@
-package com.devsquard.common.jwt;
+package com.devsquad.common.jwt;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import javax.crypto.SecretKey;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
-import com.devsquard.auth.entity.User;
+import com.devsquad.auth.entity.User;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

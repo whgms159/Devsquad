@@ -1,8 +1,8 @@
-package com.devsquard.community.domain;
+package com.devsquad.community.domain;
 
 import java.time.LocalDateTime;
 
-import com.devsquard.community.entity.Post;
+import com.devsquad.community.entity.Post;
 
 import lombok.Builder;
 import lombok.Data;

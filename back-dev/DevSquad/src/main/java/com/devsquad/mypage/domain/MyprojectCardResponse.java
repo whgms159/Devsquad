@@ -1,4 +1,4 @@
-package com.devsquard.mypage.domain;
+package com.devsquad.mypage.domain;
 
 public class MyprojectCardResponse {
 

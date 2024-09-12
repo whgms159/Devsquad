@@ -1,4 +1,4 @@
-package com.devsquard.project.memberController;
+package com.devsquad.project.memberController;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsquard.project.memberDomain.ProjectMemberRequest;
-import com.devsquard.project.memberDomain.ProjectMemberResponse;
-import com.devsquard.project.memberService.ProjectMemberServie;
+import com.devsquad.project.memberDomain.ProjectMemberRequest;
+import com.devsquad.project.memberDomain.ProjectMemberResponse;
+import com.devsquad.project.memberService.ProjectMemberServie;
 
 import lombok.RequiredArgsConstructor;
 

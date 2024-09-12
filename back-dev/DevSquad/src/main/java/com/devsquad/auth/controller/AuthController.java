@@ -1,9 +1,8 @@
-package com.devsquard.auth.controller;
+package com.devsquad.auth.controller;
 
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsquard.auth.domain.LoginResponse;
-import com.devsquard.auth.domain.SignUpRequest;
-import com.devsquard.auth.domain.SignUpResponse;
-import com.devsquard.auth.domain.UserDeleteRequest;
-import com.devsquard.auth.service.AuthService;
-import com.devsquard.common.utils.TokenUtils;
+import com.devsquad.auth.domain.LoginResponse;
+import com.devsquad.auth.domain.SignUpRequest;
+import com.devsquad.auth.domain.SignUpResponse;
+import com.devsquad.auth.domain.UserDeleteRequest;
+import com.devsquad.auth.service.AuthService;
+import com.devsquad.common.utils.TokenUtils;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

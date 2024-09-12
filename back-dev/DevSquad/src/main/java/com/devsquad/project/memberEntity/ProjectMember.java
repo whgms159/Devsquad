@@ -1,9 +1,9 @@
-package com.devsquard.project.memberEntity;
+package com.devsquad.project.memberEntity;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import com.devsquard.auth.entity.User;
-import com.devsquard.project.entity.Project;
+import com.devsquad.auth.entity.User;
+import com.devsquad.project.entity.Project;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

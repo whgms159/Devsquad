@@ -1,16 +1,16 @@
-package com.devsquard.project.memberService;
+package com.devsquad.project.memberService;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.devsquard.auth.entity.User;
-import com.devsquard.project.entity.Project;
-import com.devsquard.project.memberDomain.ProjectMemberRequest;
-import com.devsquard.project.memberDomain.ProjectMemberResponse;
-import com.devsquard.project.memberEntity.ProjectMember;
-import com.devsquard.project.memberRepository.ProjectMemberRepository;
-import com.devsquard.project.repository.ProjectRepository;
+import com.devsquad.auth.entity.User;
+import com.devsquad.project.entity.Project;
+import com.devsquad.project.memberDomain.ProjectMemberRequest;
+import com.devsquad.project.memberDomain.ProjectMemberResponse;
+import com.devsquad.project.memberEntity.ProjectMember;
+import com.devsquad.project.memberRepository.ProjectMemberRepository;
+import com.devsquad.project.repository.ProjectRepository;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,14 +1,14 @@
-package com.devsquard.community.service;
+package com.devsquad.community.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.devsquard.community.domain.PostRequest;
-import com.devsquard.community.domain.PostResponse;
-import com.devsquard.community.entity.Post;
-import com.devsquard.community.repository.PostRepository;
+import com.devsquad.community.domain.PostRequest;
+import com.devsquad.community.domain.PostResponse;
+import com.devsquad.community.entity.Post;
+import com.devsquad.community.repository.PostRepository;
 
 import lombok.RequiredArgsConstructor;
 

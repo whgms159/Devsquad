@@ -1,4 +1,4 @@
-package com.devsquard.auth.domain;
+package com.devsquad.auth.domain;
 
 import lombok.Builder;
 import lombok.Data;

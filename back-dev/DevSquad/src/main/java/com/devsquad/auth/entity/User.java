@@ -1,4 +1,4 @@
-package com.devsquard.auth.entity;
+package com.devsquad.auth.entity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -12,7 +12,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.devsquard.auth.domain.RoleEnum;
+import com.devsquad.auth.domain.RoleEnum;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -36,6 +36,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User implements UserDetails {
+	private static final long serialVersionUID = 1L; // serialVersionUID 추가
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(updatable = false)
@@ -68,12 +70,14 @@ public class User implements UserDetails {
 	private LocalDateTime deletedAt;
 	
 	@Column(name = "failed_count")
+	@Builder.Default
 	private int failedCount = 0;
 	
 	@Column(name = "logined_at")
 	private LocalDateTime loginedAt;
 	
 	@Column(name = "is_blocked")
+	@Builder.Default
 	private boolean isBlock = false;
 	
 	@Column(name = "blocked_at")
@@ -83,6 +87,7 @@ public class User implements UserDetails {
 	private String language;
 	
 	@Column(name = "hot_level", nullable = false)
+	@Builder.Default
 	private int hotLevel = 37;
 	
 	@Column
@@ -102,7 +107,7 @@ public class User implements UserDetails {
 		return List.of(new SimpleGrantedAuthority(role.name()));
 	}
 
-	// 유저의 email을 유니크 키로 사용
+	// 유저의 email 유니크 키로 사용
 	@Override
 	public String getUsername() {
 		return email;

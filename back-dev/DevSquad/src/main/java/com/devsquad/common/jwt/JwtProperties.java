@@ -1,4 +1,4 @@
-package com.devsquard.common.jwt;
+package com.devsquad.common.jwt;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

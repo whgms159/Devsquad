@@ -1,4 +1,4 @@
-package com.devsquard.mypage.controller;
+package com.devsquad.mypage.controller;
 
 import org.springframework.stereotype.Controller;
 

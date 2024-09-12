@@ -1,11 +1,11 @@
-package com.devsquard.community.entity;
+package com.devsquad.community.entity;
 
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import com.devsquard.auth.entity.User;
+import com.devsquad.auth.entity.User;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

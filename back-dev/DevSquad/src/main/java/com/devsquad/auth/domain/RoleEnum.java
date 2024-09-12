@@ -1,4 +1,4 @@
-package com.devsquard.auth.domain;
+package com.devsquad.auth.domain;
 
 public enum RoleEnum {
 	ROLE_USER("ROLE_USER"),

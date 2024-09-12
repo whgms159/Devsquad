@@ -1,4 +1,4 @@
-package com.devsquard.project.controller;
+package com.devsquad.project.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsquard.project.domain.ProjectRequest;
-import com.devsquard.project.domain.ProjectResponse;
-import com.devsquard.project.service.ProjectService;
+import com.devsquad.project.domain.ProjectRequest;
+import com.devsquad.project.domain.ProjectResponse;
+import com.devsquad.project.service.ProjectService;
 
 import lombok.RequiredArgsConstructor;
 
