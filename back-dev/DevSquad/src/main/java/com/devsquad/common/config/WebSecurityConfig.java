@@ -11,16 +11,20 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
 import com.devsquad.auth.repository.UserRepository;
+import com.devsquad.common.jwt.JwtAuthenticationFilter;
 import com.devsquad.common.jwt.JwtAuthenticationService;
 import com.devsquad.common.jwt.JwtProperties;
 import com.devsquad.common.jwt.JwtProvider;
+import com.devsquad.common.jwt.LoginCustomAuthenticationFilter;
 import com.devsquad.common.utils.TokenUtils;
 
 import lombok.RequiredArgsConstructor;
@@ -29,9 +33,9 @@ import lombok.RequiredArgsConstructor;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class WebSecurityConfig {
-	private UserDetailsService userDetailsService;
-	private UserRepository userRepo;
-	private JwtProperties jwtProperties;
+	private final UserDetailsService userDetailsService;
+	private final UserRepository userRepo;
+	private final JwtProperties jwtProperties;
 	
 	// JWT Provider 생성자 호출
 	private JwtProvider jwtProvider() {
@@ -78,6 +82,15 @@ public class WebSecurityConfig {
 			).hasRole("USER")
 			.anyRequest().permitAll() // 임시적 모두 허용
 		);
+		
+		// 무상태성 세션 관리
+		http.sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+		
+		// 특정 경로(로그인)에 대한 필터 추가 [authenticationManager, jwtAuthenticationService 생성자를 호출해 매개변수로 등록]
+		http.addFilterBefore(new LoginCustomAuthenticationFilter(authenticationManager(), jwtAuthenticationService()), UsernamePasswordAuthenticationFilter.class);
+		
+		// (토큰을 통해 검증할 수 있도록) 필터 추가 [jwtProvider 생성자를 호출해 매개변수로 등록]
+		http.addFilterAfter(new JwtAuthenticationFilter(jwtProvider()), UsernamePasswordAuthenticationFilter.class);
 		
 		// HTTP 기본 설정
 		http.httpBasic(HttpBasicConfigurer::disable);
