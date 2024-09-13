@@ -1,0 +1,73 @@
+.profileCard {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  width: 70vw;
+  max-width: 1000px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2rem;
+  flex: 1;
+}
+
+.nickname {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.language {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+.streaksContainer {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.streak {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #6c757d;
+}
+
+.mannerTemperature {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem; 
+  background: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

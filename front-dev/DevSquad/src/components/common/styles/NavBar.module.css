@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* 좌우의 요소 사이에 공간을 균등하게 배치 */
+  align-items: center;            /* 수직 중앙 정렬 */
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 80%;   /* 너비를 90%로 설정 */
+  margin: 0 auto; /* 부모 요소에 맞춰 중앙 정렬 */
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 180px;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menuItem {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.loginButton {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #0056b3;
+}

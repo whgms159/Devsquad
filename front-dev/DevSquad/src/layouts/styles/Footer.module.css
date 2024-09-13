@@ -1,0 +1,33 @@
+.footer {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  width: 100%; /* 푸터의 너비를 전체 화면 너비로 설정 */
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+}
+
+.footerContainer {
+  color: #ccc;
+  width: 80%; /* 너비를 90%로 설정 */
+}
+
+.footerNaviBar {
+  color: #ccc;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-top: 28px;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.footerBottom {
+  font-size: 0.8em;
+  color: #ccc;
+  text-align: center;
+}

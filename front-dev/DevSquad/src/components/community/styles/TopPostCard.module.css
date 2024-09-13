@@ -1,0 +1,63 @@
+.container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 15px 0;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+}
+
+.postRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.postRow:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.postRow:last-child {
+  border-bottom: none;
+}
+
+.postIdx, .postTitle, .postLikes, .postViews {
+  flex: 1;
+}
+
+.postTitle {
+  flex: 5;
+}
+
+.postIdx {
+  font-weight: bold;
+}
+
+.postTitle {
+
+}
+
+.postLikes, .postViews {
+  color: #555;
+}

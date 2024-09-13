@@ -1,0 +1,61 @@
+.container{
+   
+    width : 80%;
+    text-align: center;
+    border: 1px black solid;
+    padding: 10px;
+}
+
+.title {
+    font-size: 50px;
+    text-align: left;
+}
+
+.topbtn {
+    display: flex;
+    justify-content: space-between; /* 버튼을 양쪽 끝으로 정렬 */
+    padding: 10px; /* 버튼과 상하 여백 추가 (옵션) */
+}
+
+.topbtn button {
+    margin: 0 10px; /* 버튼 사이의 간격 설정 (옵션) */
+}
+.common{
+    border: 1px solid black;
+}
+
+.tags {
+    width: 50%;
+    border-collapse: separate; /* 테이블 셀 간의 경계선 분리 */
+    border-spacing: 20px; /* 태그 간의 간격 설정 */
+}
+
+.tags th {
+    padding: 10px; /* 태그 내 여백 설정 (옵션) */
+    background-color: #f0f0f0; /* 태그 배경색 설정 (옵션) */
+}
+
+.tags a {
+    text-decoration: none; /* 링크 밑줄 제거 (옵션) */
+    color: #333; /* 링크 텍스트 색상 설정 (옵션) */
+}
+
+.list1 {
+    display: inline;
+    flex-direction: row;
+    
+}
+.li1 {
+    display: inline-flex;
+    margin : 20px;
+    
+}
+
+
+
+.table1 th {
+    border: solid 1px black ;
+    border-radius: 2rem;
+    width: 80px;
+}
+
