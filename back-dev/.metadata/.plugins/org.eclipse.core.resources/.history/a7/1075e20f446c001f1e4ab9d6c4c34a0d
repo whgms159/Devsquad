@@ -1,0 +1,5 @@
+package com.devsquard.mypage.service;
+
+public class ProfileService {
+
+}

@@ -1,0 +1,10 @@
+package com.devsquard.mypage.service;
+
+import org.springframework.stereotype.Service;
+
+import com.devsquard.mypage.repository.MyProfileCardRepository;
+
+@Service
+public class MyProfileCardService {
+	private final MyProfileCardRepository myProfileCardRepository;
+}

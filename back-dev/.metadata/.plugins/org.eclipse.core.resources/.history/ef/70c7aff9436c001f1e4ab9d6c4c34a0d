@@ -1,0 +1,5 @@
+package com.devsquard.mypage.repository;
+
+public class ProfileRepository {
+
+}

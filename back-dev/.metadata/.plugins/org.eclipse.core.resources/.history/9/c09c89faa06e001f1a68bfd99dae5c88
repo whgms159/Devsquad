@@ -1,0 +1,13 @@
+package com.devsquard.mypage.service;
+
+import org.springframework.stereotype.Service;
+
+import com.devsquard.mypage.repository.MyProfileCardRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MyProfileCardService {
+	private final MyProfileCardRepository myProfileCardRepository;
+}

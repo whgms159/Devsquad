@@ -1,0 +1,9 @@
+package com.devsquard.mypage.domain.request;
+
+import lombok.Data;
+
+@Data
+public class MyProfileCardRequest {
+	private Long id;
+	private String ninkNamel , language , intro;
+}
