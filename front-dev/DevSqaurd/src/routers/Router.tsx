@@ -7,6 +7,7 @@ import MyPage from "../pages/MyPage";
 import PostDetail from "../components/community/PostDetail";
 import PostForm from "../components/community/PostForm";
 
+
 export default function Router() {
   return (
     <Routes>
@@ -25,6 +26,7 @@ export default function Router() {
 
         {/* 마이 페이지 */}
         <Route path="/my-page/*" element={<MyPage />} />
+        
 
       </Route>
     </Routes>

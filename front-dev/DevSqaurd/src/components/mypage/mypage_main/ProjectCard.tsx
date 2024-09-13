@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../styles/ProjectCard.module.css"
+import style from "../styles/mypage_main/ProjectCard.module.css"
 
 interface ProjectCardProps {
     image: string;

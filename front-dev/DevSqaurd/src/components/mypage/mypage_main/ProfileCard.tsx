@@ -1,24 +1,28 @@
 import React from "react";
-import style from "../styles/ProfileCard.module.css"
+import style from "../styles/mypage_main/ProfileCard.module.css";
 
 // ProfileCard 컴포넌트 props 타입
 interface ProfileCardProps {
-    nickname: string;
-    language: string;
-    streakCount: number;
-    mannerTemperature: number;
+  nickname: string;
+  language: string;
+  streakCount: number;
+  mannerTemperature: number;
 }
 // ProfileCard 컴포넌트
-const ProfileCard: React.FC<ProfileCardProps> = ({nickname,language,streakCount,mannerTemperature}) => {
-    // streakCount streak div 생성
-    const createStreaks = (count: number) => {
-        return Array.from({ length: count}, (_, index) => (
-            <div key={index} className={style.streak}></div>
-        ))
-    
-}
+const ProfileCard: React.FC<ProfileCardProps> = ({
+  nickname,
+  language,
+  streakCount,
+  mannerTemperature,
+}) => {
+  // streakCount streak div 생성
+  const createStreaks = (count: number) => {
+    return Array.from({ length: count }, (_, index) => (
+      <div key={index} className={style.streak}></div>
+    ));
+  };
 
-return (
+  return (
     <div className={style.profileCard}>
       <div className={style.profileHeader}>
         <img
@@ -29,11 +33,13 @@ return (
         <div className={style.profileInfo}>
           <h2 className={style.nickname}>{nickname}</h2>
           <p className={style.language}>사용 언어: {language}</p>
-          <div className={style.streaksContainer}>{createStreaks(streakCount)}</div>
+          <div className={style.streaksContainer}>
+            {createStreaks(streakCount)}
+          </div>
         </div>
         <div className={style.mannerTemperature}>{mannerTemperature}°C</div>
       </div>
     </div>
   );
-}
+};
 export default ProfileCard;

@@ -1,0 +1,62 @@
+package com.devsquad.project.member.controller;
+
+
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.devsquad.auth.entity.User;
+import com.devsquad.project.member.domain.MemberRequest;
+import com.devsquad.project.member.domain.MemberResponse;
+import com.devsquad.project.member.service.MemberServies;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@Tag(name = "프로젝트 멤버", description = "프로젝트 멤버 관련 API")
+@RequestMapping("/api/member")
+@RequiredArgsConstructor
+public class MemberController {
+	private final MemberServies projectMemberService;
+	
+	//추가
+	@Operation(summary = "프로젝트 멤버 추가", description = "프로젝트 멤버를 추가합니다.")
+	@PostMapping("")
+	public ResponseEntity<MemberResponse> addProjectMember(MemberRequest pro, User user){
+		MemberResponse savedProjectMember = projectMemberService.addProjectMember(pro, user);
+		return ResponseEntity.status(HttpStatus.CREATED).body(savedProjectMember);
+	}
+	
+	//삭제
+	@Operation(summary = "프로젝트 멤버 삭제", description = "특정 프로젝트 멤버를 삭제합니다.")
+	@DeleteMapping("/{id}")
+	public ResponseEntity<MemberResponse> deleteProjectMember(@PathVariable("id") Long id){
+		MemberResponse dProjectMember = projectMemberService.deleteProjectMember(id);
+		return ResponseEntity.ok(dProjectMember);
+	}
+	
+	//멤버 리스트
+	@Operation(summary = "프로젝트 멤버 조회", description = "프로젝트 멤버를 반환합니다.")
+	@GetMapping("")
+	public ResponseEntity<List<MemberResponse>> memberList(){
+		List<MemberResponse> memList = projectMemberService.getAllMember();
+		return ResponseEntity.ok(memList);
+	}
+	
+	//프로젝트 신청
+	@Operation(summary = "프로젝트 신청", description = "프로젝트를 신청합니다.")
+	@PostMapping("/{id}")
+	public ResponseEntity<MemberResponse> joinProject(Long proId, Long memId){
+		MemberResponse memJoin = projectMemberService.joinProject(proId,memId);
+		return ResponseEntity.ok(memJoin);
+	}
+}
